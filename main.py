@@ -33,14 +33,5 @@ if uploaded_file is not None:
     for result in results:
         rect = result['faceRectangle']
         draw = ImageDraw.Draw(img)
-        draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])], fill=None, outline='green', width=5)
-        atr = result['faceAttributes']
-        emo = atr['emotion']
-        neu = emo['neutral']
-        con = neu * 100
-        conc = str(con)        
-        textsize = 50
-        font = ImageFont.truetype("Arial Unicode.ttf", size=textsize)
-        txpos = (rect['left'],rect['top']-textsize-5)
-        draw.text(txpos, conc, font=font, fill='white')   
-        st.image(img, caption="Uploaded image.", use_column_width=True)
+        draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])], fill=None, outline='green', width=5) 
+    st.image(img, caption="Uploaded image.", use_column_width=True)
