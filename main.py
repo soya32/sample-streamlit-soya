@@ -42,5 +42,5 @@ if uploaded_file is not None:
         conc = str(con)        
         textsize = 50
         txpos = (rect['left'],rect['top']-textsize-5)
-        draw.text(txpos, conc, size=50, fill='white')
+        draw.text(txpos, conc, size=100, fill='white')
     st.image(img, caption="Uploaded image.", use_column_width=True)
