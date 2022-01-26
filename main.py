@@ -38,10 +38,9 @@ if uploaded_file is not None:
         emo = atr['emotion']
         neu = emo['neutral']
         con = neu * 100
-        conc = str(con)
-        
+        conc = str(con)        
         textsize = 50
         font = ImageFont.truetype("Arial Unicode.ttf", size=textsize)
         txpos = (rect['left'],rect['top']-textsize-5)
         draw.text(txpos, conc, font=font, fill='white')   
-    st.image(img, caption="Uploaded image.", use_column_width=True)
+        st.image(img, caption="Uploaded image.", use_column_width=True)
