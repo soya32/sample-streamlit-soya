@@ -41,5 +41,6 @@ if uploaded_file is not None:
         con = neu * 100
         conc = str(con)        
         textsize = 50
+        font = ImageFont.truetype("Arial Unicode.ttf", size=textsize)
 
     st.image(img, caption="Uploaded image.", use_column_width=True)
