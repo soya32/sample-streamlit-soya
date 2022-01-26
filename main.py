@@ -35,4 +35,4 @@ if uploaded_file is not None:
         rect = result['faceRectangle']
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])], fill=None, outline='green', width=5) 
-        st.image(img, caption="Uploaded image.", use_column_width=True)
+    st.image(img, caption="Uploaded image.", use_column_width=True)
